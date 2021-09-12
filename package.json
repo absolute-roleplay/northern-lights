@@ -1,0 +1,33 @@
+{
+  "name": "northern-lights",
+  "version": "1.0.0",
+  "description": "A Custom Discord Bot designed for the Absolute Roleplay Community.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/absolute-roleplay/northern-lights.git"
+  },
+  "keywords": [
+    "Discord.js",
+    "Absolute",
+    "RP",
+    "Discord",
+    "Bot"
+  ],
+  "author": "Anthony F. Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/absolute-roleplay/northern-lights/issues"
+  },
+  "homepage": "https://github.com/absolute-roleplay/northern-lights#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2",
+    "underscore": "^1.13.1"
+  }
+}
