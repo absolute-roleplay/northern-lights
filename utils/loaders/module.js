@@ -32,9 +32,9 @@ exports.getModules = () => {
     return moduleArray;
 };
 
-exports.searchModule = (module) => {
+exports.search = (module, guildID) => {
     return _.first(_.filter(modules, (m) => {
-        return m.name === module;
+        return m.name === module && m.guildID === guildID;
     }));
 };
 

@@ -4,15 +4,16 @@ require('./database');
 
     const { Client } = require('discord.js');
     const fs = require('fs');
-    const _ = require('underscore');
+    _ = require('underscore');
     const moduleLoader = require('./utils/loaders/module');
     const commandLoader = require('./utils/loaders/command');
 
-    const client = new Client({ intents: 32767});
+    prefix = process.env.COMMAND_PREFIX;
+    client = new Client({ intents: 32767});
 
     var guilds = [];
-    var moduleSeeder = require('./models/module').model;
-    var commandSeeder = require('./models/command').model;
+    moduleSeeder = require('./models/module').model;
+    commandSeeder = require('./models/command').model;
     
     var selfDeletingMessage = require('./utils/main').selfDeletingMessage;
 
@@ -22,7 +23,7 @@ require('./database');
         console.log("INIT: Northern Lights Discord Bot has started.");
 
         guilds = client.guilds.cache.map(guild => guild.id);
-
+        
         moduleLoader.checkDatabase();
 
         setTimeout(() => {

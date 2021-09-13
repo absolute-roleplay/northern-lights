@@ -29,7 +29,7 @@ exports.checkDatabase = async () => {
     });
 };
 
-exports.searchCommand = (cmd, guild) => {
+exports.search = (cmd, guild) => {
     return _.first(_.filter(commands, (command) => {
         return command.name === cmd && command.guildID === guild;
     }));
